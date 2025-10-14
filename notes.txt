@@ -1,0 +1,110 @@
+//Personal notes - for recording progression of code.
+
+1. Create 2 folders - a backend folder; this folder will contain your API and any calculations that you may encounter
+
+2. Inside of your backend foler - run "npm init -y"
+   Then run "npm install express@4.18.2"
+
+   This will download the necessessary "node_modules" folder, as well as the package.json file.
+
+3. In order for us to import the express module in the server.js file in the following format:
+    "import express from express"
+    we must:
+        Inside of the package.json file underneath "scripts" add
+        "type: module"
+
+    This will allow us to run the server with the command "node server.js"
+
+    If you would like to run this program with a simpler command such as "npm run dev"
+    inside of the package.json:
+        "dev: node server.js"
+
+    now in order to run this program:
+    "cd NoteTaking-App/backend"
+    then
+    "npm run dev"
+
+4. If you would like your application to run in such a way that, any changes that you make to your code
+    are automatically updated on the website:
+    Run the following commands in the terminal:
+    "cd /backend/"
+    "npm install nodemon -D"
+    
+    Following this, go to the package.json file
+    change the "dev" line of code to:
+    "dev" : "nodemon server.js"
+
+    Now anytime you change your code, the server will refresh, automatically updating your website.
+
+5. We add a new script labelled:
+   "start":"node server.js"
+
+   We now have two different scripts, the "dev"(Development) script which we will be using while developing the application
+   which allows us to see constant changes as they are being made to the app.
+
+   The "start" script will be used when we are deploying the application for use. 
+   We will not need any changes to be updated once the app is deployed, as this 
+   is not necessary and will cause disruption to the user.
+
+
+    ---------------------------------- FULL STACK APPLICATION NOTES ----------------------------------------
+
+    Full-Stack Application:
+
+        Client - This is the frontend of the application, this is what will be presented to the user
+                  when they use our application.
+        Server - Ths is the backend of the application, this handles all of the logical and mathematical operations,
+                  that will be required for the components in our frontend.
+        Database - This is where all of the application data will be stored.
+
+        When a user clicks a button or interacts with the Client in anyway such that 
+        data is being created or destroyed.
+        The Client sends a REQUEST to the Server.
+        The Server [Backend] will create or delete the appropriate data in the databas upon receiving this request.
+        The Server will then send a RESPONSE back to the Client to say "SUCCESS" or "FAILURE".
+
+        This is captured as the "Request-Response" Lifecycle.
+
+    API:
+
+    This is the Application Programming Interface, in short this interface allows two different applications
+    to communicate with each other.
+
+    Types of API's:
+
+    REST API (Most commonly used infrastructure):
+    [Uses HTTP Methods]
+
+        GET -> GET data from the application.
+        POST -> POST data on the application.
+        PUT  -> UPDATE data that is already on the application.
+        DELETE -> DELETE data from the application.
+
+    HTTP Status Codes:
+
+    1xxxx - Informational [Something we will not encounter that much, just giving information]
+    2xxxx - SUCCESS 
+            200 - OK: Everything worked as accepted.
+            201 - Created: New resource successfully created (e.g after a POST request).
+
+    3xxxx - Redirection
+            The 300 status codes are for redirection meaning the server is telling the client,
+            that what we are looking for is somewhere else.
+            301 - "Moved Permanently"
+                If your website changes domain names.
+    
+    4xxxx - Client Errors [ These are situations where the client causes an error]
+            400 Bad Request - The request is malformed or invalid.
+            401 Unauthorized - You must log in (missing or invalid credentials).
+            403 Forbidden - You're not allowed to accesss this.
+            404 Not Found - The URL doesn't exist.
+            429 Too Many Requests.
+
+    5xxxx - Server Errors
+            These happen when something goes wrong from the server side even though the client
+            has made a valid request.
+            500 Internal Server Error - Something broke on the server.
+            503 Service Unavailable - Server is temporarily overloaded or down.
+
+
+        
