@@ -1,10 +1,12 @@
 import express from "express";
+import notesRoutes from "./routes/notesRoutes.js"
 
 const app = express();
 
-app.get("/api/notes",(req,res)=>{
-    res.send("You got 10 notes")
-})
+//An endpoints is a combination of a URL + HTTP method that lets the client
+//interact with a specific resource.
+
+app.use("/api/notes",notesRoutes)
 
 app.listen(5001, () => {
     console.log("Server started on PORT: 5001");
