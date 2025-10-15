@@ -36,6 +36,7 @@
 
     Now anytime you change your code, the server will refresh, automatically updating your website.
 
+
 5. We add a new script labelled:
    "start":"node server.js"
 
@@ -46,6 +47,19 @@
    We will not need any changes to be updated once the app is deployed, as this 
    is not necessary and will cause disruption to the user.
 
+6. Set up your code in folders, make controllers for each REST Api call.
+
+7. Now we are integrating the databse into the application first.
+   To do this we must use the following command:
+   "cd /backend/" - to ensure that our terminal is running in the backend.
+   "npm install mongoose"
+
+8. Create a configuration folder inside of the source folder (src)
+    This folder contains the db.js file, 
+    we will be accessing the database within this file.
+
+9. Inside of the db.js file we will create a function "export const ConnectDB",
+    within which we will call "mongoose.connect("connection-string-from-MongoDB.com)
 
     ---------------------------------- FULL STACK APPLICATION NOTES ----------------------------------------
 
@@ -107,4 +121,11 @@
             503 Service Unavailable - Server is temporarily overloaded or down.
 
 
+    DATABASES:
+    
+        SQL DATABSE - Data is stored in tables with rows and columns, like a spreadsheet.
+        No-SQL Database - Stores data like JSON or key-value pairs - good for changing data
+        shapes.
+
+        MongoDB - No-SQL Database.
         
