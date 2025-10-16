@@ -59,7 +59,23 @@
     we will be accessing the database within this file.
 
 9. Inside of the db.js file we will create a function "export const ConnectDB",
-    within which we will call "mongoose.connect("connection-string-from-MongoDB.com)
+    within which we will call "mongoose.connect("connection-string-from-MongoDB.com")
+
+10. Place the connection string inside of a .env file
+    After which launch this command in the terminal:
+    "npm i dotenv"
+
+    We will now be able to import the connection string from the .env file, instead of it openly being in
+    our code.
+
+11. Create a models folder, a model will dictate the attributes of a specific component of the application.
+    For instance since we are making a NoteTaking application, we will model our Notes with specific attributes.
+    To do this we must create a "Note.js" file in our models folder,
+    within this folder we will specify the characteristics of a note; namely:
+    - Title of the note
+    - Description of the note
+    - Date note was written/created/updated
+    
 
     ---------------------------------- FULL STACK APPLICATION NOTES ----------------------------------------
 
@@ -127,5 +143,5 @@
         No-SQL Database - Stores data like JSON or key-value pairs - good for changing data
         shapes.
 
-        MongoDB - No-SQL Database.
+        MongoDB: No-SQL Database.
         
