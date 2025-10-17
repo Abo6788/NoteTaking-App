@@ -75,6 +75,12 @@
     - Title of the note
     - Description of the note
     - Date note was written/created/updated
+
+12. cd /frontend/
+    npm create vite@latest
+    npm install
+    npm i react-router // this will be used to switch between different pages
+    npm i react-hot-toast //this will be used for notifications on the application
     
 
     ---------------------------------- FULL STACK APPLICATION NOTES ----------------------------------------
@@ -144,4 +150,8 @@
         shapes.
 
         MongoDB: No-SQL Database.
+
+    MIDDLEWARE:
+
+        Middleware is a function that runs in the middle betweeen the request and the response.
         
