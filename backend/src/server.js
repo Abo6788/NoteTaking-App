@@ -13,10 +13,14 @@ connectDB();
 //An endpoints is a combination of a URL + HTTP method that lets the client
 //interact with a specific resource.
 
+//middleware that we add
+app.use(express.json())
+
+
 app.use("/api/notes",notesRoutes)
 
 app.listen(PORT, () => {
-    console.log("Server started on PORT:", PORT);
+    console.log("Server started on PORT:", PORT); 
 });
 
 // mongodb+srv://abonjoks_db_user:5GEtwRC3Yw9kjsCt@cluster0.j0m9zcx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
