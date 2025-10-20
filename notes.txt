@@ -91,6 +91,9 @@
     "npm i -D daisyUI@4.12.24"
         - Reasoning behind not using the latest version is bugs that have been found in v5, v4.12.24 is the most stable version.
     
+15. Install "lucide" - This package will be used for the icons in the UI of the application.
+    "npm i lucide-react"
+    We then install the axios package - this will replace our FETCH API with the AXIOS.
 
     ---------------------------------- FULL STACK APPLICATION NOTES ----------------------------------------
 

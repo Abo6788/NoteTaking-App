@@ -9,7 +9,6 @@ const App = () => {
   return (
     //changed the theme of the application divider to the 'forest' theme
     <div data-theme="forest">  
-      <button className='btn border-t-cyan-100'>Click me</button>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/create" element={<CreatePage/>}/>
