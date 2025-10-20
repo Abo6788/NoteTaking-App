@@ -81,6 +81,15 @@
     npm install
     npm i react-router // this will be used to switch between different pages
     npm i react-hot-toast //this will be used for notifications on the application
+
+13. Install TailWindCSS for frontend frameworks
+    Go to TailWindCSS.com -> Get Started -> ... -> Vite
+    "Paste the commands into cd /frontend/ terminal , then:
+    "npm run dev"
+
+14. Install DaisyUI - This will even further reduce the amount of code necessary to deploy ui components.
+    "npm i -D daisyUI@4.12.24"
+        - Reasoning behind not using the latest version is bugs that have been found in v5, v4.12.24 is the most stable version.
     
 
     ---------------------------------- FULL STACK APPLICATION NOTES ----------------------------------------
