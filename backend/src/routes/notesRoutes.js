@@ -3,11 +3,11 @@ import {getNoteById, createNote, deleteNote, getAllNotes, updateNote} from "../c
 
 const router = express.Router();
 
-router.get("/",getNoteById);
-router.get("/",getAllNotes);
-router.post("/", createNote);
-router.put("/:id", updateNote);
-router.delete("/:id", deleteNote);
+router.get("/api/notes/:id",getNoteById);
+router.get("/api/notes",getAllNotes);
+router.post("/api/notes", createNote);
+router.put("/api/notes/:id", updateNote);
+router.delete("/api/notes/:id", deleteNote);
 
 
 

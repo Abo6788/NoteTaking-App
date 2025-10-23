@@ -2,6 +2,7 @@ import express from "express";
 import notesRoutes from "./routes/notesRoutes.js"
 import {connectDB} from "./config/db.js";
 import dotenv from "dotenv"
+import cors from 'cors'
 
 dotenv.config();
 
@@ -13,8 +14,9 @@ const PORT = process.env.PORT || 5001;
 
 //middleware that we add
 app.use(express.json())
+app.use(cors())
 
-app.use("/api/notes",notesRoutes)
+app.use(notesRoutes)
 
 connectDB().then(() => {        //Once the database is connected then we start the server
 
@@ -23,5 +25,3 @@ connectDB().then(() => {        //Once the database is connected then we start t
     });
 });
 
-
-// mongodb+srv://abonjoks_db_user:5GEtwRC3Yw9kjsCt@cluster0.j0m9zcx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0

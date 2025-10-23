@@ -95,6 +95,14 @@
     "npm i lucide-react"
     We then install the axios package - this will replace our FETCH API with the AXIOS.
 
+16. You will receive a CORS error when trying to fetch your notes on to the homepage.
+    This is due to 2 websites trying to share data between each other - [API DOMAIN + FRONTEND DOMAIN]
+    To solve this:
+    cd /backend/
+    "npm i cors"
+
+
+
     ---------------------------------- FULL STACK APPLICATION NOTES ----------------------------------------
 
     Full-Stack Application:
