@@ -101,6 +101,8 @@
     cd /backend/
     "npm i cors"
 
+17. We use <div = grid></div> for the grid nature on the homepage of the application.
+
 
 
     ---------------------------------- FULL STACK APPLICATION NOTES ----------------------------------------
